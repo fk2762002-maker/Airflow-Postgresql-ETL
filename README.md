@@ -40,6 +40,7 @@ CSV File + REST API → Extract → Transform → Validate → Load into Postgre
 
 # Project Structure 
 
+```
 astro-airflow-pipelines/
 ├── dags/
 │   └── retail_etl_dag.py
@@ -55,7 +56,7 @@ astro-airflow-pipelines/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 # How to Run
