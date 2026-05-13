@@ -38,7 +38,7 @@ CSV File + REST API → Extract → Transform → Validate → Load into Postgre
 
 ---
 
-# Project Structure
+# Project Structure 
 
 astro-airflow-pipelines/
 ├── dags/
