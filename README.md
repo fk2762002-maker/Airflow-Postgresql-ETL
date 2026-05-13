@@ -1,19 +1,23 @@
-# Astro Airflow Pipelines
+# Astro Airflow Pipeline
 This project is an ETL pipeline built using Apache Airflow (Astro CLI). It extracts data from a CSV file and a REST API, processes and validates the data, and loads it into a PostgreSQL database.
+
 ---
- #Overview
+# Overview
 The pipeline processes data from:
- Local CSV file (`retail_sales.csv`)
- REST API (DummyJSON products endpoint)
+
+* Local CSV file (`retail_sales.csv`)
+* REST API (DummyJSON products endpoint)
+
 It performs a full ETL workflow:
 Extraction → Transformation → Validation → Loading into PostgreSQL using incremental logic.
 
 ---
-#Pipeline Flow
+# Pipeline Flow
 CSV File + REST API → Extract → Transform → Validate → Load into PostgreSQL → Logging
 
 ---
-#Features
+
+# Features
 * Extract data from CSV and REST API
 * Retry mechanism for API requests
 * Data validation before loading
@@ -23,7 +27,8 @@ CSV File + REST API → Extract → Transform → Validate → Load into Postgre
 * Basic logging for monitoring pipeline execution
 
 ---
-#Tech Stack
+
+# Tech Stack
 * Apache Airflow
 * Astro CLI
 * Python
@@ -32,8 +37,9 @@ CSV File + REST API → Extract → Transform → Validate → Load into Postgre
 * Requests library
 
 ---
- #Project Structure
- 
+
+# Project Structure
+
 astro-airflow-pipelines/
 ├── dags/
 │   └── retail_etl_dag.py
@@ -53,7 +59,6 @@ astro-airflow-pipelines/
 ---
 
 # How to Run
-
 1. Set up the environment using Astro CLI
 2. Start Airflow locally
 3. Open Airflow UI in the browser
@@ -61,7 +66,7 @@ astro-airflow-pipelines/
 
 ---
 
-#Database
+# Database
 The pipeline loads data into:
 * Product dimension table
 * Sales fact table
@@ -74,11 +79,11 @@ The pipeline loads data into:
 * Supports safe re-runs
 
 ---
+
 # Logging
 Tracks:
 * Extraction status
 * Transformation results
 * Load operations
 * Errors and failures
----
 
